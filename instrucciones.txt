@@ -1,0 +1,19 @@
+
+-Instalar Mysql
+
+-Correr comandos para crear tablas
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+-Credenciales para ver la BD 
+
+database=testdb
+user=root
+password=MyPassword123
+
+
+-Construir docker
+docker build -t testquantumdocs-app .
+
+-correr docker
+docker run -d -p 5221:80 testquantumdocs-app

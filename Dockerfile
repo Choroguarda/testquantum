@@ -1,22 +1,21 @@
-# Usar la imagen oficial SDK para build
+
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-# Copiar csproj y restaurar dependencias
-COPY *.csproj ./
-RUN dotnet restore
 
-# Copiar todo el código y publicar release
-COPY . ./
-RUN dotnet publish -c Release -o out
+COPY TestQuantumDocs/*.csproj ./TestQuantumDocs/
+RUN dotnet restore ./TestQuantumDocs/TestQuantumDocs.csproj
 
-# Imagen runtime para ejecutar la app
+
+COPY . .
+WORKDIR /src/TestQuantumDocs
+RUN dotnet publish -c Release -o /app/publish
+
+
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+COPY --from=build /app/publish .
 
-COPY --from=build /app/out ./
-
-# Exponer el puerto que usa la app (cambia si es otro)
-EXPOSE 5221
+EXPOSE 80
 
 ENTRYPOINT ["dotnet", "TestQuantumDocs.dll"]
