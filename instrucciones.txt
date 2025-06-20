@@ -1,19 +1,14 @@
+INSTRUCCIONES
 
--Instalar Mysql
+-En la terminal del procecto ejecutar el siguiente comando docker-compose up --build.
+-Al terminar, el proyecto se estara ejecutando en la siguiente URL  http://localhost:5221/swagger/index.html
+-Al entrar al proyecto , se veran los 5 endpoints solicitados en la prueba tecnica.
+-Si se desea entrar a la bd, es necesario conectarse con los siguientes datos:
+ *-Puerto: 3306
+ *-Host: localhost
+ *-Database: testdb
+ *-Username: root
+ *-Password: MyPassword123
 
--Correr comandos para crear tablas
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-
--Credenciales para ver la BD 
-
-database=testdb
-user=root
-password=MyPassword123
-
-
--Construir docker
-docker build -t testquantumdocs-app .
-
--correr docker
-docker run -d -p 5221:80 testquantumdocs-app
+ADVERTENCIA: Si los puertos 3306 o 5221 estan ocpuados, tan solo se debe cambiar los puertos del archivo dockerfile
+y ejecutar el comando docker-compose up --build.

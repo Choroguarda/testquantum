@@ -1,4 +1,7 @@
+using System.ComponentModel.DataAnnotations.Schema;
 namespace TestQuantumDocs.Models
+
+
 {
     public class Document
     {
@@ -9,6 +12,8 @@ namespace TestQuantumDocs.Models
         public string AuthorEmail { get; set; }
         public string SerialCode { get; set; }
         public string PublicationCode { get; set; }
+
+        public bool Deleted { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }

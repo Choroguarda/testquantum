@@ -38,6 +38,7 @@ namespace TestQuantumDocs.Controllers
                 SerialCode = dto.SerialCode,
                 PublicationCode = dto.PublicationCode,
                 CreatedAt = DateTime.UtcNow,
+                Deleted = false,
                 DocumentPageIndex = dto.Indexes.Select(i => new DocumentPageIndex
                 {
                     Name = i.Name,
@@ -119,7 +120,7 @@ namespace TestQuantumDocs.Controllers
 
             if (document == null)
                 return NotFound(new { message = $"Documento con ID {id} no encontrado." });
-
+    
             var result = new DocumentDetailDto
             {
                 Id = document.Id,
@@ -149,6 +150,7 @@ namespace TestQuantumDocs.Controllers
                 return NotFound("Documento no encontrado o ya eliminado.");
 
             doc.DeletedAt = DateTime.UtcNow;
+            doc.Deleted = true;
             await _context.SaveChangesAsync();
 
             return Ok("Documento eliminado correctamente.");
@@ -207,13 +209,21 @@ namespace TestQuantumDocs.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDocument(int id, [FromBody] UpdateDocumentRequestDto dto)
         {
-            var document = await _context.Documents
-                .Include(d => d.DocumentPageIndex)
-                .FirstOrDefaultAsync(d => d.Id == id && d.DeletedAt == null);
+           var document = await _context.Documents
+            .Include(d => d.DocumentPageIndex)
+            .FirstOrDefaultAsync(d => d.Id == id);
 
             if (document == null)
-                return NotFound();
+            {
+                return NotFound(new { message = $"Documento con ID {id} no encontrado." });
+            }
 
+            if (document.Deleted || document.DeletedAt != null)
+            {
+                return BadRequest(new { error = "El archivo que intenta modificar ha sido eliminado." });
+            }
+
+           
             var errors = ValidateDocumentUpdate(dto);
             if (errors.Any())
                 return BadRequest(new { error = errors });

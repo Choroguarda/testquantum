@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestQuantumDocs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5facf6d8b96028535dac988887496bb6eef0397")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+113fcf5a6f0b3c7faf70234e16cfd697788c8ad7")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestQuantumDocs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestQuantumDocs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
