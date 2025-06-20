@@ -1,8 +1,11 @@
 INSTRUCCIONES
 
 -En la terminal del procecto ejecutar el siguiente comando docker-compose up --build.
+
 -Al terminar, el proyecto se estara ejecutando en la siguiente URL  http://localhost:5221/swagger/index.html
+
 -Al entrar al proyecto , se veran los 5 endpoints solicitados en la prueba tecnica.
+
 -Si se desea entrar a la bd, es necesario conectarse con los siguientes datos:
  *-Puerto: 3306
  *-Host: localhost
