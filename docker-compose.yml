@@ -4,12 +4,15 @@ services:
   testquantumdocs:
     build: .
     ports:
-      - "5221:5221"  # mapea puerto del contenedor al host
+      - "5221:80"
     depends_on:
       - mysql
     environment:
-      - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=testdb;user=root;password=MyPassword123
+     - ASPNETCORE_ENVIRONMENT=Development
+     - ASPNETCORE_URLS=http://+:80
+     - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=testdb;user=root;password=MyPassword123
     restart: unless-stopped
+
 
   mysql:
     image: mysql:8.0

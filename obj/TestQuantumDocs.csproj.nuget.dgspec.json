@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\TestQuantumDocs.csproj": {}
+    "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\TestQuantumDocs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\TestQuantumDocs.csproj": {
+    "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\TestQuantumDocs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\TestQuantumDocs.csproj",
+        "projectUniqueName": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\TestQuantumDocs.csproj",
         "projectName": "TestQuantumDocs",
-        "projectPath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\TestQuantumDocs.csproj",
+        "projectPath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\TestQuantumDocs.csproj",
         "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\obj\\",
+        "outputPath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"

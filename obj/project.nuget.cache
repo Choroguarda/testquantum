@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7F47phvYjV0=",
+  "dgSpecHash": "M+Ar5aAwCoE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\TestQuantumDocs\\TestQuantumDocs.csproj",
+  "projectFilePath": "C:\\Users\\guard\\OneDrive\\Desktop\\Nueva carpeta\\2\\testquantum\\TestQuantumDocs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guard\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.17\\microsoft.aspnetcore.openapi.8.0.17.nupkg.sha512",
