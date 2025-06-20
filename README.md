@@ -7,13 +7,20 @@ INSTRUCCIONES
 -Al entrar al proyecto , se veran los 5 endpoints solicitados en la prueba tecnica.
 
 -Si se desea entrar a la bd, es necesario conectarse con los siguientes datos:
+
  *-Puerto: 3306
+ 
  *-Host: localhost
+
  *-Database: testdb
+
  *-Username: root
+
  *-Password: MyPassword123
 
 ADVERTENCIA: Si los puertos 3306 o 5221 estan ocpuados, tan solo se debe cambiar los puertos del archivo dockerfile
+
 y ejecutar el comando docker-compose up --build.
+
 
 *-*-*-* LIKN CONVERSACION CON IA https://chatgpt.com/share/6855cbb8-5944-8009-9a51-5090b8676a4f *-*-*-*
